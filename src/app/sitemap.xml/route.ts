@@ -6,7 +6,6 @@ export function GET() {
     { url: "/", priority: "1.0", changefreq: "weekly" },
     { url: "/about", priority: "0.8", changefreq: "monthly" },
     { url: "/schedule", priority: "0.9", changefreq: "weekly" },
-    { url: "/media", priority: "0.8", changefreq: "weekly" },
     { url: "/groups", priority: "0.7", changefreq: "monthly" },
     { url: "/new", priority: "0.9", changefreq: "monthly" },
   ];

@@ -31,7 +31,6 @@ export default function Footer() {
               {[
                 { href: "/about", label: "О нас" },
                 { href: "/schedule", label: "Встречи" },
-                { href: "/media", label: "Медиа" },
                 { href: "/groups", label: "Группы" },
                 { href: "/new", label: "Прийти впервые" },
               ].map((link) => (
