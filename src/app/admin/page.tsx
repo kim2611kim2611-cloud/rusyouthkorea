@@ -5,6 +5,15 @@ import { Lock, LogOut, Plus, Trash2, Edit3, Bot, Loader2, Youtube, Calendar } fr
 
 type Tab = "events" | "sermons" | "ai";
 
+/** Temporary until NEXT_PUBLIC_ADMIN_PASSWORD is set in the deployment environment */
+const TEMP_ADMIN_PASSWORD = "k123456789";
+
+function isAdminPasswordValid(password: string): boolean {
+  if (password === TEMP_ADMIN_PASSWORD) return true;
+  const envPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
+  return Boolean(envPassword && password === envPassword);
+}
+
 function AdminLogin({ onLogin }: { onLogin: () => void }) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -15,7 +24,7 @@ function AdminLogin({ onLogin }: { onLogin: () => void }) {
     setLoading(true);
     setError("");
     await new Promise((r) => setTimeout(r, 400));
-    if (password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD || password === "admin123") {
+    if (isAdminPasswordValid(password)) {
       localStorage.setItem("admin_auth", "true");
       onLogin();
     } else {

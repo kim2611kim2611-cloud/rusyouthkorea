@@ -58,7 +58,7 @@ export default function AboutPage() {
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-4">
             Мы — <span className="gradient-text">живая церковь</span><br />
-            для русских в Корее
+            для русскоязычных в Корее
           </h1>
           <p className="text-white/80 text-lg max-w-xl">
             Русскоязычная молодёжная церковь в Инчхоне, Южная Корея.
