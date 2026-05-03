@@ -65,6 +65,14 @@ export default function HomePage() {
               Узнать о нас
             </Link>
           </div>
+          <p className="mt-8">
+            <Link
+              href="/schedule"
+              className="text-sm font-semibold text-white/90 hover:text-white underline underline-offset-4 decoration-white/35 hover:decoration-white transition-colors"
+            >
+              Все встречи по дням →
+            </Link>
+          </p>
         </div>
 
         {/* Scroll indicator */}
@@ -132,6 +140,14 @@ export default function HomePage() {
                     Открыть на карте →
                   </a>
                 </div>
+              </div>
+              <div className="mt-8 flex justify-center sm:justify-start">
+                <Link
+                  href="/schedule"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/15 border border-white/25 text-white text-sm font-semibold hover:bg-white/25 transition-colors"
+                >
+                  Полное расписание →
+                </Link>
               </div>
             </div>
           </div>
